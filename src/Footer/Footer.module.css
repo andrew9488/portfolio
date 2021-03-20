@@ -1,0 +1,19 @@
+.footerBlock {
+    border: 1px solid;
+    height: 200px;
+    background-color: #8b8bfa;
+}
+
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts {
+    border: 1px solid;
+    width: 280px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
