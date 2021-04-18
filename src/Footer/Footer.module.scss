@@ -1,0 +1,42 @@
+@import "src/common/slyles/sass/variable";
+@import "../common/slyles/sass/mixins";
+
+.footerBlock {
+  background-color: $bgColor;
+
+  .footerContainer {
+    display: flex;
+    flex-direction: row-reverse;
+
+    span {
+      @include text('Open Sans', $textColor, 14px, 0.5px, 1.1);
+    }
+
+    @media screen and (max-width: 668px) {
+      @include flex(flex, column);
+      align-items: center;
+
+    }
+
+    .contacts {
+      width: 280px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      a {
+        color: $textColor;
+      }
+
+      a:hover {
+        color: #333;
+      }
+
+      .icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

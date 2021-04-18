@@ -1,0 +1,14 @@
+@import "src/common/slyles/sass/variable";
+
+.header {
+    background-color: $bgColor;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    @media screen and (max-width: 530px){
+        justify-content: center;
+    }
+
+}

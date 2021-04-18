@@ -1,19 +1,24 @@
 import React from "react"
-import style from './Footer.module.css';
-import styleContainer from '../common/slyles/Container.module.css'
+import style from "./Footer.module.scss";
+import styleContainer from "../common/slyles/Container.module.css";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faGithub} from "@fortawesome/free-brands-svg-icons";
+import {faLinkedin} from "@fortawesome/free-brands-svg-icons";
+import {faTelegram} from "@fortawesome/free-brands-svg-icons";
+import {NavLink} from "react-router-dom";
+
 
 export function Footer() {
     return (
         <div className={style.footerBlock}>
             <div className={`${styleContainer.container} ${style.footerContainer}`}>
-                <h3>Andrew Pashkevich</h3>
                 <div className={style.contacts}>
-                    <span>Facebook</span>
-                    <span>Linkedin</span>
-                    <span>GitHub</span>
+                    <NavLink to="/"><FontAwesomeIcon className={style.icon} icon={faTelegram}/></NavLink>
+                    <NavLink to="/"><FontAwesomeIcon className={style.icon} icon={faLinkedin}/></NavLink>
+                    <NavLink to="/"><FontAwesomeIcon className={style.icon} icon={faGithub}/></NavLink>
                 </div>
                 <div>
-                    <span>© 2019 beingeorge, All Rights Reserved.</span>
+                    <span>© Andrew 2021 | All Right Reserved</span>
                 </div>
             </div>
         </div>

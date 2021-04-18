@@ -1,0 +1,36 @@
+@import "./src/common/slyles/sass/variable";
+
+.headingContainer {
+  text-align: center;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-family: 'Josefin Sans', sans-serif;
+
+  span {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $textPrimaryTitleColor;
+  }
+
+  h2 {
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 750;
+    color: $textMainTitleColor;
+  }
+
+  &::after {
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgb(165, 165, 165), rgba(0, 0, 0, 0));
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    content: "";
+    bottom: -5px;
+  }
+}
+
