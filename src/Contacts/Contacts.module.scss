@@ -1,0 +1,90 @@
+@import "./src/common/slyles/sass/variable.scss";
+@import "../common/slyles/sass/mixins";
+
+.contactsContainer {
+  background-color: $bgSecondColor;
+
+  .contactsBlock {
+    @include flex(flex,column);
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .setContact {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    @media screen and (max-width: 899px) {
+      @include flex(flex,column);
+      align-items: center;
+      height: 100%;
+    }
+
+    h3 {
+      color: $textMainTitleColor;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 22px;
+      margin-top: -15px;
+      @media screen and (max-width: 899px) {
+        margin-top: 5px;
+        text-align: center;
+      }
+    }
+
+    .field {
+      width: 59%;
+      @include flex(flex,column);
+      justify-content: space-around;
+      font-family: 'Open Sans', sans-serif;
+      @media screen and (max-width: 899px) {
+        width: 75%;
+      }
+    }
+  }
+
+  textarea {
+    width: 100%;
+    height: 100px;
+    background-color: $bgSecondColor;
+    padding: 5px;
+    outline: none;
+    border-bottom: 1px solid #6e7373;
+    color: $textColor;
+    @media screen and (max-width: 899px) {
+      margin: 10px 0;
+    }
+  }
+
+  .inputBlock {
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      width: 45%;
+      background-color: $bgSecondColor;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #6e7373;
+      color: $textColor;
+      @media screen and (max-width: 899px) {
+        margin: 10px 0;
+      }
+    }
+  }
+
+  .submitBtn {
+    background-color: #333;
+    padding: 10px 20px;
+    width: 150px;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+  }
+}
+
+
+

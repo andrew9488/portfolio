@@ -1,0 +1,34 @@
+@import "./src/common/slyles/sass/variable.scss";
+@import "../../slyles/sass/mixins";
+
+.contactContainer {
+  @include flex(flex, column);
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-right: 20px;
+  font-family: 'Open Sans', sans-serif;
+  color: $textColor;
+
+  .contactBlock {
+    display: flex;
+    margin: 7px 3px;
+
+    .icon {
+      border: 1px solid;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      padding: 5px;
+    }
+
+    .contact {
+      @include flex(flex, column);
+      margin-left: 5px;
+    }
+  }
+}
+
+
+
+
+
