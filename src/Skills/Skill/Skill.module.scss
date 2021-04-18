@@ -1,0 +1,33 @@
+@import "src/common/slyles/sass/variable";
+@import "../../common/slyles/sass/mixins";
+
+.skill {
+    width: 300px;
+    background-color: $bgSecondColor;
+    @include flex(flex, column);
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    box-sizing: border-box;
+    box-shadow: 0 6px 12px rgba(19, 19, 19, 0.25), 0 7px 7px rgba(19, 19, 19, 0.25);
+}
+
+.icons {
+    height: 50px;
+    width: 50px;
+}
+
+.icons .icon {
+    height: 50px;
+    width: 50px;
+    color: $textColor;
+}
+
+.title {
+    @include text('Josefin Sans', $textMainTitleColor, 24px, 1px, 1.2);
+}
+
+.description span{
+    @include text('Open Sans', $textColor, 16px, 1px, 1.1);
+}

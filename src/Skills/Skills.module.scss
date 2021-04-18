@@ -1,0 +1,32 @@
+@import "src/common/slyles/sass/variable.scss";
+@import "../common/slyles/sass/mixins";
+
+.skillsBlock {
+  min-height: 100vh;
+  background-color: $bgSecondColor;
+
+  .skillsContainer {
+    @include flex(flex, column);
+    align-items: center;
+    justify-content: flex-start;
+
+    .skills {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      @media screen and (max-width: 755px) {
+        display: flex;
+        justify-content: center;
+      }
+
+    }
+  }
+}
+
+
+
+
+
+
