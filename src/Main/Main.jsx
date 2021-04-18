@@ -1,17 +1,24 @@
 import React from "react"
-import style from './Main.module.css';
-import styleContainer from '../common/slyles/Container.module.css'
+import style from "./Main.module.scss";
+import styleContainer from "../common/slyles/Container.module.css";
+import myPhoto from "../assets/image/myPhoto.png"
+
 
 export function Main() {
+
+    const photo = {
+        backgroundImage: `url(${myPhoto})`,
+    }
+
     return (
         <div className={style.mainBlock}>
-            <div className={styleContainer.container}>
+            <div className={`${styleContainer.container} ${style.mainContainer}`}>
                 <div className={style.greetingText}>
-                    <span>Hello There</span>
-                    <h1>I am Andrew Pashkevich</h1>
-                    <p>Frontend Developer</p>
+                    <span>Hello, My name is</span>
+                    <h1>Andrew Pashkevich</h1>
+                    <p>I am a Frontend Developer</p>
                 </div>
-                <div className={style.photo}></div>
+                <div className={style.photo} style={photo}></div>
             </div>
         </div>
     );

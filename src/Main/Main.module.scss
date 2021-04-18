@@ -1,0 +1,49 @@
+@import "src/common/slyles/sass/variable";
+@import "src/common/slyles/sass/mixins";
+
+.mainBlock {
+  height: 100vh;
+  background-color: $bgColor;
+
+  .mainContainer {
+    //@media screen and(max-width: 961px) {
+    //  @include flex(flex, column);
+    //  align-items: center;
+    //  justify-content: space-around;
+    //}
+    .greetingText {
+      font-family: 'Josefin Sans', sans-serif;
+
+      span {
+        color: $textPrimaryTitleColor;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 20px;
+      }
+
+      h1 {
+        color: $textMainTitleColor;
+        font-weight: 850;
+        margin: 7px 0 15px;
+        text-transform: uppercase;
+      }
+
+      p {
+        @include text('Open Sans', $textColor, 18px, 1px, 1.1);
+      }
+    }
+
+    .photo {
+      width: 400px;
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: $bgColor;
+      box-shadow: 5px 12px 18px rgba(19, 19, 19, 0.25), 0 10px 10px rgba(19, 19, 19, 0.25);
+    }
+  }
+}
+
+
+

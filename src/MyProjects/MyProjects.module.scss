@@ -1,0 +1,25 @@
+@import "src/common/slyles/sass/variable";
+@import "src/common/slyles/sass/mixins";
+
+.projectsBlock {
+  min-height: 100vh;
+  background-color: $bgColor;
+
+  .projectsContainer {
+    @include flex(flex, column);
+    align-items: center;
+    justify-content: flex-start;
+
+    .projects {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      @media screen and (max-width: 1028px) {
+        justify-content: center;
+      }
+    }
+  }
+}
+
