@@ -3,7 +3,7 @@
 
 .contactsContainer {
   background-color: $bgSecondColor;
-  min-height: 86vh;
+  min-height: 85vh;
 
   .contactsBlock {
     @include flex(flex,column);
@@ -13,9 +13,10 @@
 
   .setContact {
     width: 100%;
-    height: 250px;
+    height: 350px;
     display: flex;
     justify-content: space-between;
+    align-content: center;
     margin-bottom: 15px;
     flex-wrap: wrap;
     @media screen and (max-width: 899px) {
@@ -27,8 +28,8 @@
     h3 {
       color: $textMainTitleColor;
       font-family: 'Josefin Sans', sans-serif;
-      font-size: 22px;
-      margin-top: -15px;
+      font-size: 26px;
+      margin-top: -20px;
       @media screen and (max-width: 899px) {
         margin-top: 5px;
         text-align: center;
