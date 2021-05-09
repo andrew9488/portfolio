@@ -13,9 +13,9 @@ export function Footer() {
         <div className={style.footerBlock}>
             <div className={`${styleContainer.container} ${style.footerContainer}`}>
                 <div className={style.contacts}>
-                    <NavLink to="/"><FontAwesomeIcon className={style.icon} icon={faTelegram}/></NavLink>
-                    <NavLink to="/"><FontAwesomeIcon className={style.icon} icon={faLinkedin}/></NavLink>
-                    <NavLink to="/"><FontAwesomeIcon className={style.icon} icon={faGithub}/></NavLink>
+                    <NavLink to="/telegram" target='_blank'><FontAwesomeIcon className={style.icon} icon={faTelegram}/></NavLink>
+                    <NavLink to="/linkedId" target='_blank'><FontAwesomeIcon className={style.icon} icon={faLinkedin}/></NavLink>
+                    <NavLink to="/github" target='_blank'><FontAwesomeIcon className={style.icon} icon={faGithub}/></NavLink>
                 </div>
                 <div>
                     <span>© Andrew 2021 | All Right Reserved</span>

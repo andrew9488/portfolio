@@ -7,7 +7,7 @@ export function Project(props) {
         <div className={style.project}>
             <div className={style.imgContainer} style={props.style}>
             </div>
-            <h3 className={style.projectTitle}><NavLink to="/">{props.title}</NavLink></h3>
+            <h3 className={style.projectTitle}><NavLink to={props.path} target='_blank'>{props.title}</NavLink></h3>
             <div className={style.description}>
                 <span>{props.description}</span>
             </div>

@@ -1,14 +1,18 @@
 import React from "react"
 import style from "./Nav.module.scss";
-import {NavLink} from "react-router-dom";
+import {Link, animateScroll as scroll} from "react-scroll";
 
 export function Nav() {
     return (
         <div className={style.nav}>
-            <NavLink to="/main" activeClassName={style.activeLink}>Main</NavLink>
-            <NavLink to="/skills" activeClassName={style.activeLink}>Skills</NavLink>
-            <NavLink to="/myProjects" activeClassName={style.activeLink}>Projects</NavLink>
-            <NavLink to="/contacts" activeClassName={style.activeLink}>Contacts</NavLink>
+            <Link to="main" spy={true} smooth={true} offset={-66} duration={700}
+                  activeClass={style.activeLink}>Main</Link>
+            <Link to="skills" spy={true} smooth={true} offset={-66} duration={700}
+                  activeClass={style.activeLink}>Skills</Link>
+            <Link to="projects" spy={true} smooth={true} offset={-66} duration={700}
+                  activeClass={style.activeLink}>Projects</Link>
+            <Link to="contacts" spy={true} smooth={true} offset={-64} duration={700}
+                  activeClass={style.activeLink}>Contacts</Link>
         </div>
     );
 }

@@ -2,45 +2,55 @@
 @import "src/common/slyles/sass/mixins";
 
 .mainBlock {
-  height: 100vh;
+  min-height: 100vh;
   background-color: $bgColor;
-
+  display: flex;
+  align-items: center;
   .mainContainer {
-    //@media screen and(max-width: 961px) {
-    //  @include flex(flex, column);
-    //  align-items: center;
-    //  justify-content: space-around;
-    //}
+    @media screen and (max-width: 1230px){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+
     .greetingText {
       font-family: 'Josefin Sans', sans-serif;
 
-      span {
+      p {
         color: $textPrimaryTitleColor;
         text-transform: uppercase;
         letter-spacing: 1px;
-        font-size: 20px;
+        font-size: 28px;
+        margin-bottom: 0;
       }
 
       h1 {
-        color: $textMainTitleColor;
+        @include text('Open Sans', $textMainTitleColor, 40px, 1px, 1.1);
         font-weight: 850;
         margin: 7px 0 15px;
         text-transform: uppercase;
       }
 
-      p {
-        @include text('Open Sans', $textColor, 18px, 1px, 1.1);
+      span {
+        @include text('Open Sans', $textColor, 24px, 1px, 1.1);
+        margin-top: 0;
       }
     }
 
     .photo {
-      width: 400px;
-      height: 400px;
+      width: 500px;
+      height: 550px;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       background-image: $bgColor;
       box-shadow: 5px 12px 18px rgba(19, 19, 19, 0.25), 0 10px 10px rgba(19, 19, 19, 0.25);
+      @media screen and (max-width: 1230px){
+        max-width: 100%;
+        min-height: 300px;
+        margin-bottom: 30px;
+      }
     }
   }
 }

@@ -17,25 +17,27 @@ export function MyProjects() {
     }
 
     return (
-        <div className={style.projectsBlock}>
-            <div className={`${styleContainer.container} ${style.projectsContainer}`}>
-                <Title span="Portfolio" h2="My Projects"/>
-                <div className={style.projects}>
-                    <Project style={social}
-                             title="Social Network"
-                             description="A social network is a website that allows people with similar interests
+        <div className={style.projectsBlock} id="projects">
+                <div className={`${styleContainer.container} ${style.projectsContainer}`}>
+                    <Title span="Portfolio" h2="My Projects"/>
+                    <div className={style.projects}>
+                        <Project path="/social-network"
+                                 style={social}
+                                 title="Social Network"
+                                 description="A social network is a website that allows people with similar interests
                     to come together and share information, photos and videos. ...
                      Those who engage on social network sites as a personal endeavor interact by using various forms
                      of media to discuss their lives and interests."/>
-                    <Project style={todo}
-                             title="TodoList"
-                             description="What is a ToDoList? The definition is a simple one.
+                        <Project path="/todolist"
+                                 style={todo}
+                                 title="TodoList"
+                                 description="What is a ToDoList? The definition is a simple one.
                     It's a list of tasks you need to complete, or things that you want to do. Most typically,
                      they're organised in order of priority.
                     Traditionally, they're written on a piece of paper or post it notes
                     and acts as a memory aid."/>
+                    </div>
                 </div>
-            </div>
         </div>
     );
 }

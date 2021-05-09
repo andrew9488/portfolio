@@ -4,9 +4,12 @@ import {Nav} from "../Nav/Nav";
 
 export function Header() {
     return (
-        <div className={style.header}>
-            <Nav/>
-        </div>
+        <>
+            <div className={style.header}>
+                <Nav/>
+            </div>
+            <div style={{height: 66}}/>
+        </>
     );
 }
 

@@ -3,6 +3,7 @@
 
 .contactsContainer {
   background-color: $bgSecondColor;
+  min-height: 86vh;
 
   .contactsBlock {
     @include flex(flex,column);
