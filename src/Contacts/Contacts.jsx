@@ -6,13 +6,15 @@ import {Contact} from "../common/components/contact/Contact";
 import {faHome, faMailBulk, faPhone} from "@fortawesome/free-solid-svg-icons";
 import {Footer} from "../Footer/Footer";
 import emailjs from 'emailjs-com';
+import{ init } from 'emailjs-com';
+init("user_KJUlv0SJEPU19ul97aIQx");
 
 
 export function Contacts() {
 
     const sendEmail = (event) => {
         event.preventDefault()
-        emailjs.sendForm('gmail', 'gmail', event.target, 'user_KJUlv0SJEPU19ul97aIQx')
+        emailjs.sendForm('service_nc9dref', 'gmail_dbkum3o', event.target, 'user_KJUlv0SJEPU19ul97aIQx')
             .then((result) => {
                 alert("Your message has sent")
                 console.log(result.text);
