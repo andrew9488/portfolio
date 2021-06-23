@@ -1,20 +1,14 @@
-import React, {useState} from "react"
+import React from "react"
 import style from "./Contacts.module.scss"
 import styleContainer from '../common/slyles/Container.module.css'
 import {Title} from "../common/components/title/Title";
 import {Contact} from "../common/components/contact/Contact";
-import {faPhone} from "@fortawesome/free-solid-svg-icons";
-import {faMailBulk} from "@fortawesome/free-solid-svg-icons";
-import {faHome} from "@fortawesome/free-solid-svg-icons";
+import {faHome, faMailBulk, faPhone} from "@fortawesome/free-solid-svg-icons";
 import {Footer} from "../Footer/Footer";
 import emailjs from 'emailjs-com';
 
 
 export function Contacts() {
-
-    const [name, setName] = useState()
-    const [email, setEmail] = useState()
-    const [message, setMessage] = useState()
 
     const sendEmail = (event) => {
         event.preventDefault()
@@ -44,13 +38,10 @@ export function Contacts() {
                         </div>
                         <form className={style.field} onSubmit={sendEmail}>
                             <div className={style.inputBlock}>
-                                <input placeholder="Your Name" value={name}
-                                       onChange={e => setName(e.currentTarget.value)}/>
-                                <input placeholder="Your Email" value={email}
-                                       onChange={e => setEmail(e.currentTarget.value)}/>
+                                <input placeholder="Your Name" name="name"/>
+                                <input placeholder="Your Email" name="email"/>
                             </div>
-                            <textarea placeholder="Your Message..." value={message}
-                                      onChange={e => setMessage(e.currentTarget.value)}/>
+                            <textarea placeholder="Your Message..." name="message"/>
                             <button className={style.submitBtn} type="submit">Send Message</button>
                         </form>
                     </div>
