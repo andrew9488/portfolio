@@ -7,7 +7,7 @@ import {faPhone} from "@fortawesome/free-solid-svg-icons";
 import {faMailBulk} from "@fortawesome/free-solid-svg-icons";
 import {faHome} from "@fortawesome/free-solid-svg-icons";
 import {Footer} from "../Footer/Footer";
-import axios from "axios";
+import emailjs from 'emailjs-com';
 
 
 export function Contacts() {
@@ -16,19 +16,17 @@ export function Contacts() {
     const [email, setEmail] = useState()
     const [message, setMessage] = useState()
 
-    const onSubmitHandler = (event) => {
-        console.log(event)
+    const sendEmail = (event) => {
         event.preventDefault()
-        axios.post(`https://gmail-nodejs.herokuapp.com/sendMessage`, {name, email, message})
-            .then(() => {
-                    setName("")
-                    setEmail("")
-                    setMessage("")
-                    alert("Your message was sent")
-                }
-            ).catch(() => {
-            alert("Something wrong")
-        })
+        emailjs.sendForm('gmail', 'gmail', event.target, 'user_KJUlv0SJEPU19ul97aIQx')
+            .then((result) => {
+                alert("Your message has sent")
+                console.log(result.text);
+            }, (error) => {
+                alert("Something wrong")
+                console.log(error.text);
+            });
+        event.target.reset()
     }
 
 
@@ -44,7 +42,7 @@ export function Contacts() {
                             <Contact name="Email" contact="pashkevichandrew@gmail.com" icon={faMailBulk}/>
                             <Contact name="Address" contact="Minsk" icon={faHome}/>
                         </div>
-                        <form className={style.field} onSubmit={onSubmitHandler}>
+                        <form className={style.field} onSubmit={sendEmail}>
                             <div className={style.inputBlock}>
                                 <input placeholder="Your Name" value={name}
                                        onChange={e => setName(e.currentTarget.value)}/>
